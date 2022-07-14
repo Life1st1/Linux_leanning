@@ -22,7 +22,7 @@
 #define DATA_IN_REG						0x13c
 #define GPIO_OE_OFFSET                  0x134
 #define LED                             (1 << 24)
-#define DATA_OUT			(1 << 24)
+#define DATA_OUT			(1 << 24) /*GPIO1_24*/
 
 static dev_t dev_num;
 struct class *my_class;
