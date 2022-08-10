@@ -6,6 +6,7 @@
 #undef pr_fmt
 #define pr_fmt(fmt) "%s : " fmt,__func__ 
 
+
 void pcdev_release(struct device *dev)
 {
     pr_info("Device  released! \n");
@@ -20,7 +21,7 @@ struct pcdev_platform_data pcdev_data[2] = {
 
 /* Create 2 platform device */
 struct platform_device platform_pcdev_1 = {
-    .name = "pesudo-char-device",
+    .name = "pseudo-char-device",
     .id = 0,
     .dev =  {
             .platform_data = &pcdev_data[0],
@@ -30,7 +31,7 @@ struct platform_device platform_pcdev_1 = {
 
 
 struct platform_device platform_pcdev_2 = {
-    .name = "pesudo-char-device",
+    .name = "pseudo-char-device",
     .id = 1,
     .dev =  {
             .platform_data = &pcdev_data[1],
